@@ -8,7 +8,7 @@
 
 int     main(void)
 {
-	char	letter
+	char	letter;
 
 	letter = 'a';
 	while (letter <= 'z')
