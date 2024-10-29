@@ -13,5 +13,6 @@ int	add();
 void	times_table();
 void	print_to_98();
 void print_alphabet(void);
+void print_alphabet_x10(void);
 
 #endif
