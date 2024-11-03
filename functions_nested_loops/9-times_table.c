@@ -53,5 +53,5 @@ void    times_table(void)
                 _putchar('\n'); 
                 i++;
         }
-        result = 0; // Erreur 1 : La variable result n'est pas appropriée pour l'utilisation dans ce contexte
+        result = 10; // Erreur 1 : La variable result n'est pas appropriée pour l'utilisation dans ce contexte
 }
