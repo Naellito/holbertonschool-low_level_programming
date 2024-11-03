@@ -29,7 +29,7 @@ void	ft_printnum(int n)
 }
 
 /**
- * jack_bauer - Print every minute of day.
+ * jack_bauer - Print every minute of the day..
  */
 
 void	jack_bauer(void)
@@ -43,7 +43,7 @@ void	jack_bauer(void)
 		j = 0;
 		while (j <= 59)
 		{
-			ft_printnum;
+			ft_printnum(i);
 			write(1, ":", 1);
 			ft_printnum(j);
 			write(1, "\n", 1);
