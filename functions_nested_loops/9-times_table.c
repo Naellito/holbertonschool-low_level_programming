@@ -34,7 +34,7 @@ void    times_table(void)
         while (i < 10)
         {
                 j = 0;
-                while (j < 10)
+                while (j <= 10)
                 {
                         result = i * j;
                         if (j > 0 && result < 10)
