@@ -1,26 +1,21 @@
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
 
 /**
-  * print_alphabet - Make the alphabet
-  *
-  * Return: void
-  */
-void print_alphabet_x10(void)
+ * print_alphabet_x10 - Print alphabet x10
+ *
+ */
+
+void	print_alphabet_x10(void)
 {
-	int	i;
-	int	count;
+	int	n;
 
-	count = 0;
-	while (count < 10)
+	n = 1;
+	while (n <= 10)
 	{
-		i = 'a';
-		while (i < 'z')
-		{
-			_putchar(i);
-			i++;
-		}
-		_putchar('\n');
-		count++;
+		write(1, "abcdefghijklmnopqrstuvwxyz\n", 27);
+		n++;
 	}
-
 }

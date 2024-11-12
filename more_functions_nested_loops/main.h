@@ -1,9 +1,16 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef _PUTCHAR
+#define _PUTCHAR
 
-int _isupper(int c);
-int _putchar(char c);
-int mul(int a, int b);
-int _isdigit(int c);
+int     _putchar();
+int	_isupper();
+int	mul();
+int	_isdigit();
+void	print_numbers();
+void	more_numbers();
+void	print_most_numbers();
+void	print_line();
+void	print_diagonal();
+void	print_square();
+void	print_triangle();
 
-#endif /* MAIN_H */
+#endif

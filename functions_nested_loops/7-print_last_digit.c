@@ -18,6 +18,7 @@ int	print_last_digit(int n)
 		write(1, &n, 1);
 		return (n - '0');
 	}
+	else
 	{
 		n = n % 10;
 		n = n + '0';
