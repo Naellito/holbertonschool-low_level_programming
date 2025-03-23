@@ -1,23 +1,21 @@
-#include <stdio.h>
-#include "function_pointers.h"
+#include <stddef.h>
+
 /**
- * array_iterator - access elements size as hexidecimal
- * @array: where de sizes are
- * @size: arrays size
- * @action: function pointer
- *
- * Return: Elements sizes
+ * array_iterator - Array Iterator Function
+ * @array: array of integers
+ * @size: size of the array
+ * @action: pointer to the function you need to use
+ * Return: void
  */
+
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	size_t i;
+	unsigned int	i;
 
-	if (array == NULL || action == NULL)
-
-		return; /*For invalid input*/
-
-	for (i = 0; i < size; i++)/*Access size and increments*/
+	i = 0;
+	while (i < size)
 	{
-		action(array[i]); /*Calling callback function*/
+		action(array[i]);
+		i++;
 	}
 }

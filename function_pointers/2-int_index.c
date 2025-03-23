@@ -1,27 +1,31 @@
-#include <stdio.h>
 #include "function_pointers.h"
+
 /**
- * int_index - looks for integer match
- * @size: number of elements in array
- * @cmp: function pointer to compare values
- * @array: multiple elements to be searched
+ * int_index - searches for an integer
+ * @array: array of integers
+ * @size: size of the array
+ * @cmp: pointer to the function to be used to compare values
  *
- * Return: If theres a match 1, if its 0 or has no match -1 and 0 if its NULL
- *
+ * Return: -1 if error or no matches
+ * If no element matches, return -1
+ * If size <= 0, return -1
  */
-int int_index(int *array, int size, int (*cmp)(int))
+
+int	int_index(int *array, int size, int (*cmp)(int))
 {
-	int i;
+	int	i;
 
-	if (array == NULL || cmp == NULL || size <= 0)
+	i = 0;
+	if (size <= 0)
+		return (-1);
+	if (array && cmp)
 	{
-		return (-1);/*Invalid inputs*/
+		while (i < size)
+		{
+			if (cmp(array[i]) == 1)
+				return (i);
+			i++;
+		}
 	}
-
-	for (i = 0; i < size; i++)
-	{
-		if (cmp(array[i]) == 1)/*Searches for match*/
-			return (i);/*Returns index of the first element*/
-	}
-	return (-1); /*No match was found*/
+	return (-1);
 }
